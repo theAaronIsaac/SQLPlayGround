@@ -1,0 +1,70 @@
+# SQL Playground - Deployment Instructions
+
+This document explains how to deploy and run the SQL Playground application.
+
+## Option 1: Simple Deployment (No Build Required)
+
+This application is designed to be run without any build tools. You can deploy it with these simple steps:
+
+### Requirements
+- A basic web server (or Node.js)
+
+### Steps
+
+1. **Download all project files** and maintain the following structure:
+   ```
+   sql-playground/
+   ├── index.html
+   ├── App.js
+   ├── SQLPlayground.js
+   ├── index.js
+   ├── style.css
+   ├── package.json
+   └── README.md
+   ```
+
+2. **Deploy to any web server**
+   - Simply place all files in your web server's public directory
+   - No compilation or build step is needed
+
+3. **Alternatively, run locally using Node.js**
+   ```bash
+   # Install dependencies (just the "serve" package)
+   npm install
+   
+   # Start the local server
+   npm start
+   ```
+
+4. **Access the application**
+   - Open your browser and go to: `http://localhost:5000` (if using npm start)
+   - Or go to the URL where you deployed the files
+
+## Option 2: Using a Static Site Hosting Service
+
+### Deploy to GitHub Pages
+
+1. Create a GitHub repository
+2. Push all the files to the repository
+3. Enable GitHub Pages in the repository settings
+4. The site will be available at `https://[your-username].github.io/[repo-name]/`
+
+### Deploy to Netlify/Vercel
+
+1. Create a new site from your Git repository
+2. No build command needed - select to publish the directory as-is
+3. Your site will be deployed to a Netlify/Vercel subdomain
+
+## Browser Compatibility
+
+This application should work on all modern browsers:
+- Chrome 60+
+- Firefox 60+
+- Safari 11+
+- Edge 79+
+
+## Notes
+
+- The application runs completely in the browser with no backend services
+- All data is stored in memory and will reset when the page is refreshed
+- For educational purposes, no actual database is connected to this application

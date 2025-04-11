@@ -1,0 +1,23 @@
+
+{
+    "name": "sql-playground",
+    "version": "1.0.0",
+    "description": "An interactive SQL playground for learning and practicing SQL queries",
+    "main": "index.js",
+    "scripts": {
+      "start": "serve .",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "sql",
+      "playground",
+      "learning",
+      "database",
+      "education"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "serve": "^14.0.1"
+    }
+  }
