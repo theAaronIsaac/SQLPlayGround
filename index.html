@@ -1,68 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SQL Playground</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background-color: #f3f4f6;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .app-header {
-      background-color: #1e40af;
-      color: white;
-      padding: 1rem 0;
-      margin-bottom: 2rem;
-    }
-    .app-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      padding: 0 2rem;
-      margin: 0;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 2rem;
-      padding: 1rem;
-      color: #6b7280;
-      font-size: 0.875rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Playground</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="app-header">
-    <h1 class="app-title">SQL Playground</h1>
-  </header>
-  
-  <div class="container">
-    <div id="root"></div>
-  </div>
-  
-  <footer class="footer">
-    <p>SQL Playground - An educational tool for learning SQL</p>
-  </footer>
+    <header>
+        <h1>SQL Playground</h1>
+    </header>
 
-  <!-- React and ReactDOM -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
-  
-  <!-- Babel for JSX transformation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
-  
-  <!-- Main Application -->
-  <script type="text/babel" src="App.js"></script>
-  <script type="text/babel" src="SQLPlayground.js"></script>
-  <script type="text/babel" src="index.js"></script>
+    <main>
+        <textarea id="sql-input" placeholder="Write your SQL query here..." rows="10" cols="80"></textarea>
+        <br>
+        <button onclick="executeSQL()">Run SQL</button>
+        <pre id="output"></pre>
+    </main>
+
+    <script src="SQLPlayground.js"></script>
 </body>
 </html>
